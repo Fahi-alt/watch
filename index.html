@@ -1,3 +1,4 @@
+<script>
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 })
@@ -40,7 +41,7 @@ async function handleRequest(request) {
 
   return Response.redirect(cmd, 302)
 }
-
+</script>
 function getIdFromPath(path) {
   const match = path.match(/^\/(\d+)\.m3u8$/)
   return match ? match[1] : null
